@@ -1,0 +1,14 @@
+root = true
+
+# Для всех
+[*]
+charset = utf-8
+indent_style = tab
+indent_size = 4
+trim_trailing_whitespace = true
+insert_final_new_line = true
+
+# Игнорим json'ы установщиков
+[{package.json,bower.json}]
+indent_style = space
+indent_size = 2

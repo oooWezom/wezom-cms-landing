@@ -1,0 +1,31 @@
+# HTML - Основной блок игноров
+# =============================
+# Файл локальной конфигурации для проекта сборки
+config.json
+# документация для верстальщика
+docs/
+
+# лог и tmp фаилы
+npm-debug.log
+tmp/
+
+# Зависимости
+node_modules/
+bower_components/
+
+# Генерируемые критикал *.ejs файлы
+src/markup/widgets/criticals-css/
+src/markup/widgets/criticals-css-by-views/
+src/markup/widgets/criticals-js/
+
+# Результат задачи по созданию svg-sprite
+src/markup/widgets/svg/gradients.ejs
+src/markup/widgets/svg/ids.ejs
+
+# HTML - временный игнор
+# УБРАТЬ перед сдачей проекта
+# =============================
+# итоговой проект верстки
+#dist/
+# копии критикал файлов
+backup_critical/

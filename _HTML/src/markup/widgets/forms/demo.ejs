@@ -1,0 +1,191 @@
+<%
+	let idNamer = ENTRY.idNamer || 'demo-form';
+-%>
+<div id="form-demo-anchors" class="title">Демо Форма</div>
+<div class="form js-form" data-form="true">
+	<div class="form__group">
+		<label for="<%- idNamer %>--input" class="form__label">required input</label>
+		<div class="form__caption">Описание Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+		<div class="control-holder control-holder--text">
+			<input required type="text" id="<%- idNamer %>--input" name="<%- idNamer %>--input" placeholder="Ваше значение">
+			<span class="form__info">Ваше значение</span>
+		</div>
+	</div>
+
+	<div class="form__group">
+		<label for="<%- idNamer %>--phone" class="form__label">input mask</label>
+		<div class="form__caption">Описание Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+		<div class="control-holder control-holder--text">
+			<input required type="tel" id="<%- idNamer %>--phone" name="<%- idNamer %>--phone" data-rule-phoneua="true" class="js-inputmask">
+			<span class="form__info">Ваше телефон</span>
+		</div>
+	</div>
+
+	<div class="form__group">
+		<label for="<%- idNamer %>--textarea" class="form__label">required textarea</label>
+		<div class="form__caption">Описание Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+		<div class="control-holder control-holder--text">
+			<textarea required id="<%- idNamer %>--textarea" name="<%- idNamer %>--textarea" placeholder="Ваше значение"></textarea>
+			<span class="form__info">Ваше значение</span>
+		</div>
+	</div>
+
+	<div class="form__group">
+		<label for="<%- idNamer %>--select-single" class="form__label">required select single</label>
+		<div class="form__caption">Описание Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+		<div class="control-holder control-holder--text">
+			<select required id="<%- idNamer %>--select-single" name="<%- idNamer %>--select-single">
+				<option selected disabled>Выбрать Пункт</option>
+				<option value="5">5</option>
+				<option value="15">15</option>
+				<option value="25">25</option>
+				<option value="35">35</option>
+				<option value="45">45</option>
+			</select>
+			<span class="form__info">Ваше значение</span>
+		</div>
+	</div>
+
+	<div class="form__group">
+		<label for="<%- idNamer %>--select-multiple" class="form__label">required select multiple</label>
+		<div class="form__caption">Описание Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+		<div class="control-holder control-holder--text">
+			<select required multiple size="3" id="<%- idNamer %>--select-multiple" name="<%- idNamer %>--select-multiple">
+				<option selected disabled>Выбрать Пункт</option>
+				<option value="5">5</option>
+				<option value="15">15</option>
+				<option value="25">25</option>
+				<option value="35">35</option>
+				<option value="45">45</option>
+			</select>
+			<span class="form__info">Ваше значение</span>
+		</div>
+	</div>
+
+	<div class="grid grid--1 grid--lg-2 grid--space-def">
+		<div class="gcell">
+			<div class="form__group">
+				<span class="form__label">Этот параметр - обязателен!</span>
+				<div class="form__caption">Описание Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+				<div class="control-holder control-holder--flag">
+					<label>
+						<input type="checkbox" name="<%- idNamer %>--checkbox" value="1" required>
+						<ins></ins>
+						<span>Lorem ipsum</span>
+					</label>
+					<label>
+						<input type="checkbox" name="<%- idNamer %>--checkbox" value="1" required>
+						<ins></ins>
+						<span>Totam, ratione</span>
+					</label>
+					<label>
+						<input type="checkbox" name="<%- idNamer %>--checkbox" value="1" required>
+						<ins></ins>
+						<span>Saepe, ea</span>
+					</label>
+					<div>
+						<label class="has-error" for="<%- idNamer %>--checkbox" style="display: none;"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="gcell">
+			<div class="form__group">
+				<span class="form__label">Этот параметр - обязателен!</span>
+				<div class="form__caption">Описание Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+				<div class="control-holder control-holder--flag">
+					<label>
+						<input type="radio" name="<%- idNamer %>--radio" value="1" required>
+						<ins></ins>
+						<span>Lorem ipsum</span>
+					</label>
+					<label>
+						<input type="radio" name="<%- idNamer %>--radio" value="1" required>
+						<ins></ins>
+						<span>Totam, ratione</span>
+					</label>
+					<label>
+						<input type="radio" name="<%- idNamer %>--radio" value="1" required>
+						<ins></ins>
+						<span>Saepe, ea</span>
+					</label>
+					<div>
+						<label class="has-error" for="<%- idNamer %>--radio" style="display: none;"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="grid grid--1 grid--lg-2 grid--space-def">
+		<div class="gcell">
+			<div class="form__group">
+				<label for="<%- idNamer %>--file-single" class="form__label">required file single</label>
+				<div class="form__caption">Описание Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+				<div class="control-holder">
+					<label>
+						<input type="file" required id="<%- idNamer %>--file-single" name="<%- idNamer %>--file-single">
+					</label>
+					<div>
+						<label class="has-error" for="<%- idNamer %>--file-single" style="display: none;"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="gcell">
+			<div class="form__group">
+				<label for="<%- idNamer %>--file-multiple" class="form__label">required file multiple</label>
+				<div class="form__caption">Описание Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+				<div class="control-holder">
+					<label>
+						<input type="file" required multiple id="<%- idNamer %>--file-multiple" name="<%- idNamer %>--file-multiple">
+					</label>
+					<div>
+						<label class="has-error" for="<%- idNamer %>--file-multiple" style="display: none;"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="grid grid--1 grid--lg-2 grid--space-def">
+		<div class="gcell">
+			<div class="form__group">
+				<label for="<%- idNamer %>--file-js" class="form__label">js file single</label>
+				<div class="form__caption">Описание Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+				<div class="control-holder control-holder--file js-file">
+					<label>
+						<input type="file" required id="<%- idNamer %>--file-js" name="<%- idNamer %>--file-js" class="js-file__input">
+						<%- partial('buttons/js-file') -%>
+					</label>
+					<div>
+						<label class="has-error" for="<%- idNamer %>--file-js" style="display: none;"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="gcell">
+			<div class="form__group">
+				<label for="<%- idNamer %>--multiple-js" class="form__label">js file multiple</label>
+				<div class="form__caption">Описание Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+				<div class="control-holder control-holder--file js-file">
+					<label>
+						<input type="file" required multiple id="<%- idNamer %>--multiple-js" name="<%- idNamer %>--multiple-js" class="js-file__input">
+						<%- partial('buttons/js-file-multiple') -%>
+					</label>
+					<div>
+						<label class="has-error" for="<%- idNamer %>--multiple-js" style="display: none;"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="form__group">
+		<%- partial('buttons/js-form-submit') -%>
+		<%- partial('buttons/js-form-reset') -%>
+	</div>
+</div>

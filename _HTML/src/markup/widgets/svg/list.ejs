@@ -1,0 +1,88 @@
+<% include ids %>
+<% if (SYSTEM.svgList && SYSTEM.svgList.length) { -%>
+
+	<div class="svg-preview__holder">
+		<div class="svg-preview__fixed">
+			<div class="view-size">
+				<select id="svg-preview__select" class="svg-preview__select">
+					<option value="1">1 в ряд</option>
+					<option value="2">2 в ряд</option>
+					<option value="3">3 в ряд</option>
+					<option value="4" selected>4 в ряд</option>
+					<option value="5">5 в ряд</option>
+					<option value="6">6 в ряд</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div id="svg-preview" class="svg-preview">
+		<ul class="svg-preview__list">
+			<% SYSTEM.svgList.forEach( (icon) => { -%>
+				<%
+					let id_icon = `svg-preview-icon--${icon}`;
+					let id_copy_ejs = `svg-clipboard--${icon}--ejs`;
+					let id_copy_res = `svg-clipboard--${icon}--res`;
+				-%>
+				<li class="svg-preview__item">
+					<div class="svg-preview__block js-mfp-inline" data-title="<%- icon %>" data-mfp-src="#<%- id_icon %>">
+						<span class="svg-preview__icon svg-preview__icon">
+							<svg><use xlink:href="svg/sprite.svg#<%- icon %>"></use></svg>
+						</span>
+					</div>
+					<div hidden>
+						<div id="<%- id_icon %>" class="hidden-wrapper">
+							<div class="svg-preview__block svg-preview__block--modal">
+								<span class="svg-preview__icon svg-preview__icon--modal">
+									<svg>
+										<use xlink:href="svg/sprite.svg#<%= icon %>">
+									</svg>
+								</span>
+							</div>
+							<div class="svg-modal__title">
+								<%- icon -%> <em>svg symbol</em>
+
+							</div>
+							<div class="svg-modal__block">
+								<pre id="<%- id_copy_res %>" class="line-numbers language-markup"><code>
+									&lt;svg>
+										&lt;use xlink:href="svg/sprite.svg#<%= icon %>" />
+									&lt;/svg>
+								</code></pre>
+								<div style="text-align: right">
+									<button class="button js-clipboard clipboard" data-clipboard-target="#<%- id_copy_res %>">Copy code</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			<% }); -%>
+		</ul>
+	</div>
+
+	<style>
+		.hidden-wrapper .toolbar {
+			display: none !important;
+		}
+	</style>
+
+	<script>
+		var selectElement = document.getElementById('svg-preview__select');
+		var svgPreview = document.getElementById('svg-preview');
+		selectElement.onchange = function() {
+			svgPreview.removeAttribute('class');
+			['svg-preview', 'svg-preview--'+this.value].forEach(function(c) {
+				svgPreview.classList.add(c);
+			});
+		};
+
+		if ("createEvent" in document) {
+			var event = document.createEvent("HTMLEvents");
+			event.initEvent("change", false, true);
+			selectElement.dispatchEvent(event);
+		} else {
+			selectElement.fireEvent("onchange");
+		}
+	</script>
+
+<% } -%>

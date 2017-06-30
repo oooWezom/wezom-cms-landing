@@ -1,0 +1,166 @@
+<%
+let buttonsConfigs = [
+	{
+
+	}, {
+		text: 'button'
+	},
+	'Кнопки с иконками слева и справа',
+	{
+		text: 'button',
+		before: 'arrow-left'
+	}, {
+		text: 'button',
+		after: 'arrow-right'
+	},
+	'Активнaя и отключеная (атрибут <code>disabled</code> или класс <code>is-disabled</code>)',
+	{
+		text: 'is-active',
+		before: 'wezom-logo',
+		classes: ['is-active'],
+	}, {
+		text: 'is-disabled',
+		before: 'wezom-logo',
+		classes: ['is-disabled'],
+	},
+	'Кнопки с любыми атрибутами',
+	{
+		text: 'js-mfp-ajax',
+		before: 'arrow-up',
+		classes: ['js-mfp-ajax'],
+		attrs: {
+			'data-url': 'hidden/test.php',
+			'data-param': {
+				key1: 'value-1',
+				key2: 123.54,
+				key3: false,
+				key4: null
+			},
+		}
+	}, {
+		text: 'click me',
+		before: 'arrow-down',
+		attrs: {
+			title: 'Lorem ipsum dolor sit amet.',
+			onclick: 'alert( this.title )'
+		}
+	},
+	'Кнопки с цветовыми статусами',
+	{
+		text: 'primary',
+		before: 'wezom-logo',
+		classes: ['button--primary'],
+	}, {
+		text: 'secondary',
+		before: 'wezom-logo',
+		classes: ['button--secondary'],
+	}, {
+		text: 'info',
+		before: 'wezom-logo',
+		classes: ['button--info'],
+	}, {
+		text: 'success',
+		before: 'wezom-logo',
+		classes: ['button--success'],
+	}, {
+		text: 'warning',
+		before: 'wezom-logo',
+		classes: ['button--warning'],
+	}, {
+		text: 'danger',
+		before: 'wezom-logo',
+		classes: ['button--danger'],
+	},
+	'Кнопки на всю ширину',
+	{
+		text: 'button--expand-text',
+		before: 'wezom-logo',
+		classes: ['button--expand-text'],
+	}, {
+		text: 'button--expand-element',
+		before: 'wezom-logo',
+		classes: ['button--expand-element'],
+	},
+	'Кнопки с размерами',
+	{
+		text: 'sm-size',
+		before: 'wezom-logo',
+		classes: ['button--sm-size'],
+	}, {
+		text: 'md-size',
+		before: 'wezom-logo',
+		classes: ['button--md-size'],
+	}, {
+		text: 'lg-size',
+		before: 'wezom-logo',
+		classes: ['button--lg-size'],
+	}, {
+		text: 'xl-size',
+		before: 'wezom-logo',
+		classes: ['button--xl-size'],
+	},
+	'Только иконка и схлопывание текста до иконки на брейпоинтах (список брейкпоинтов из <code>_config.scss</code>)',
+	{
+		text: 'only-icon',
+		before: 'wezom-logo',
+		classes: ['button--only-icon'],
+	}, {
+		text: 'сделай ресайз до <code>mg</code>',
+		before: 'wezom-logo',
+		classes: ['button--mg-only-icon'],
+	}, {
+		text: 'сделай ресайз до <code>xl</code>',
+		before: 'wezom-logo',
+		classes: ['button--xl-only-icon'],
+	}, {
+		text: 'сделай ресайз до <code>lg</code>',
+		before: 'wezom-logo',
+		classes: ['button--lg-only-icon'],
+	}, {
+		text: 'сделай ресайз до <code>md</code>',
+		before: 'wezom-logo',
+		classes: ['button--md-only-icon'],
+	}, {
+		text: 'сделай ресайз до <code>ms</code>',
+		before: 'wezom-logo',
+		classes: ['button--ms-only-icon'],
+	}, {
+		text: 'сделай ресайз до <code>sm</code>',
+		before: 'wezom-logo',
+		classes: ['button--sm-only-icon'],
+	}, {
+		text: 'сделай ресайз до <code>xs</code>',
+		before: 'wezom-logo',
+		classes: ['button--xs-only-icon'],
+	}
+];
+-%>
+
+
+<div class="view-text">
+	<p>Базовые стили в файлу <code>src/sass/_partials/buttons-base.scss</code>. Примеры разметки:</p>
+	<div class="grid grid--1 grid--space-md">
+
+		<% buttonsConfigs.forEach( (config, i) => { -%>
+			<% if ( typeof(config) == 'string' ) { -%>
+
+				<div class="gcell _mb-sm">
+					<em><%- config %></em>
+				</div>
+
+			<% } else { -%>
+
+				<div class="gcell gcell--md-6 _mb-md">
+					<%
+						let cloneConfig = JSON.stringify( config, null, '\t' );
+						let button = partial('buttons/_sample', config);
+					-%>
+					<%- button -%>
+					<%- Utils.print( `<!-- ejs -->\n&lt;%- partial('buttons/_sample', ${cloneConfig}) -%&gt;` ) -%>
+					<%- Utils.print( `<!-- compile -->\n${button}` ) -%>
+				</div>
+
+			<% } -%>
+		<% }); -%>
+	</div>
+</div>

@@ -1,0 +1,26 @@
+<%
+	let palette = [
+		'black',
+		'gray90',
+		'gray75',
+		'gray50',
+		'gray25',
+		'gray10',
+		'white',
+
+		'link',
+		'primary',
+		'secondary',
+		'success',
+		'info',
+		'warning',
+		'danger',
+	];
+-%>
+<div class="grid grid--1 grid--md-4 grid--lg-7" style="color: #fff; text-shadow: 0 0 5px #000">
+	<% palette.forEach( (color) => { -%>
+		<div class="gcell _p-def _text-center _bgcolor-<%- color %>">
+			<code><%- color %></code>
+		</div>
+	<% }); -%>
+</div>

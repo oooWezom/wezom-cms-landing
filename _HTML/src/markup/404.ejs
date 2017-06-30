@@ -1,0 +1,31 @@
+<% include _config -%>
+<% layout('error') -%>
+<table class="error-view">
+	<tr>
+		<td>
+			<div class="error-view__block">
+				<div class="error-view__code">404</div>
+				<div class="error-view__msg">
+					<p>
+						<strong>Страница не найдена.</strong>
+						<br>
+						<small><em>К сожалению, страница, которую Вы запросили, не была найдена</em>.</small>
+					</p>
+					<p>Возможные причины такой "ошибки":</p>
+					<ul style="opacity: .8;">
+						<li>
+							<small>Неверный URL-адресс страницы - проверьте его на наличие ошибок</small>
+						</li>
+						<li>
+							<small>Страница не существует</small>
+						</li>
+						<li>
+							<small>Страница временно недоступна или удалена</small>
+						</li>
+					</ul>
+					<p>Вы можете перейти на <a href="<%- VIEWS.index.href %>">Главную страницу</a> или ознакомиться с нашим <a href="#">каталогом товаров</a>.</p>
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>

@@ -1,0 +1,8 @@
+<%
+	let list = BREADCRUMBS[filealias];
+	if (undefined === list || list.length <= 1) {
+		return '';
+	}
+-%>
+<%- partial('ui/pagination') -%>
+<%- Utils.print( partial('ui/pagination') ) -%>

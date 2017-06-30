@@ -1,0 +1,59 @@
+<% include _config -%>
+<% layout('main') -%>
+<%
+	let widgetsList = [{
+		title: 'Хлебные Крошки',
+		url: 'ui-demo/ex-breadcrumbs'
+	}, {
+		title: 'Сет цветов',
+		url: 'ui-demo/ex-colors'
+	}, {
+		title: 'Сет цветов соц. сетей',
+		url: 'ui-demo/ex-colors-socials'
+	}, {
+		title: 'Кнопки',
+		url: 'ui-demo/ex-buttons'
+	}, {
+		title: 'Пагинация',
+		url: 'ui-demo/ex-pagination'
+	}, {
+		title: 'Magnific popup',
+		url: 'ui-demo/ex-magnific'
+	}];
+-%>
+<section class="view-section">
+	<div class="widget">
+		<div class="view-size">
+			<div class="view-text _mb-def">
+				<h3>Содежание</h3>
+				<ul>
+					<% widgetsList.forEach( (widget, i) => { -%>
+						<li>
+							<a href="#anchor-<%- i %>"><%- widget.title %></a>
+						</li>
+					<% }); -%>
+				</ul>
+			</div>
+			<hr class="_mb-xl">
+		</div>
+	</div>
+	<!-- #end widget -->
+
+	<% widgetsList.forEach( (widget, i) => { -%>
+		<div class="widget">
+			<div class="view-size">
+				<div class="title title--sub">
+					<a id="anchor-<%- i %>" href="#anchor-<%- i %>">#</a>
+					<a id="anchor-<%- i %>" href="#">▲</a>
+					<%- widget.title %>
+				</div>
+				<div class="_mb-xl">
+					<%- partial( widget.url ) -%>
+				</div>
+				<hr class="_mb-xl">
+			</div>
+		</div>
+		<!-- #end widget -->
+	<% }); -%>
+
+</section>

@@ -1,0 +1,236 @@
+{
+	"project": {
+		"name": "wtpl",
+		"localFolder": "wtpl.loc",
+		"inkubatorFolder": "wtpl",
+		"description": "no description",
+		"wezom": true,
+		"responsive": true
+	},
+
+	"wezomCMS": false,
+	"maxListeners": 20,
+
+	"gulp": {
+		"linting": false,
+		"notify": false,
+		"logGet": true,
+		"log": true
+	},
+
+	"onDevelop": {
+		"minifyCSS": false,
+		"minifyJS": false,
+
+		"sourcemapsCSS": true,
+		"sourcemapsJS": false,
+
+		"optimizeImages": false,
+		"transferMethod": "newer",
+		"beautifyHTML": false
+	},
+
+	"onProduction": {
+		"minifyCSS": true,
+		"minifyJS": true,
+
+		"sourcemapsCSS": false,
+		"sourcemapsJS": false,
+
+		"optimizeImages": true,
+		"transferMethod": "newer",
+		"beautifyHTML": true
+	},
+
+	"watchForFolders": {
+		"sass": [
+			"vendor"
+		],
+		"js": [
+			"vendor"
+		]
+	},
+
+	"inkubatorConnect": {
+		"host": "91.206.30.13",
+		"user": "inkubator",
+		"pass": "9H9w4Z4a",
+		"parallel": 10,
+		"timeStamp": true,
+		"remotePath": "www/inkubator.ks.ua/html/"
+	},
+
+	"browserSync": {
+		"use": true,
+		"useHost": true,
+		"static": false,
+		"port": 4000,
+		"deepPath": "/_HTML/dist"
+	},
+
+	"itemPreviewer": {
+		"use": true,
+		"side": "left",
+		"home": "index",
+		"order": [
+			"index",
+			"sitemap"
+		],
+		"exclude": [
+			"ui",
+			"ui-text",
+			"ui-svg",
+			"ui-forms"
+		]
+	},
+
+	"gulpOptions": {
+
+		"autoprefixer": {
+			"browsers": [
+				"> 1%"
+			],
+			"cascade": false
+		},
+
+		"critical": {
+			"exclude": [
+				"ui.html",
+				"ui-text.html",
+				"ui-forms.html",
+				"ui-svg.html"
+			],
+			"moduleOptions": {
+				"minify": true,
+				"extract": false,
+				"dimensions": [
+					{
+						"width": 320,
+						"height": 480
+					}, {
+						"width": 420,
+						"height": 730
+					}, {
+						"width": 1024,
+						"height": 770
+					}, {
+						"width": 1280,
+						"height": 820
+					}, {
+						"width": 1450,
+						"height": 920
+					}, {
+						"width": 1920,
+						"height": 1080
+					}
+				],
+				"css": [
+					"{mediaFolder}/css/style.css",
+					"{mediaFolder}/css/error.css"
+				],
+				"ignore": [
+					"@font-face"
+				]
+			}
+		},
+
+		"cssnano": {
+			"zindex": false,
+			"autoprefixer": false,
+			"discardUnused": false,
+			"reduceIdents": false
+		},
+
+		"htmlBeautify": {
+			"indent_char": "\t",
+			"indent_size": 1,
+			"indent_level": 0,
+			"eol": "\n",
+			"indent_with_tabs": false,
+			"preserve_newlines": true,
+			"max_preserve_newlines": 1,
+			"jslint_happy": false,
+			"space_after_anon_function": false,
+			"brace_style": "collapse",
+			"keep_array_indentation": false,
+			"keep_function_indentation": false,
+			"space_before_conditional": true,
+			"break_chained_methods": false,
+			"eval_code": false,
+			"unescape_strings": false,
+			"wrap_line_length": 0,
+			"wrap_attributes": "auto",
+			"wrap_attributes_indent_size": 4,
+			"end_with_newline": true,
+			"unformatted": ["pre", "code", "script", "style"]
+		},
+
+		"include": {
+			"extensions": "js",
+			"hardFail": true,
+			"includePaths": [
+				"./node_modules/",
+				"./src/js/"
+			]
+		},
+
+		"modernizr": {
+			"options": [
+				"setClasses",
+				"prefixes"
+			],
+			"tests": [
+				"touchevents"
+			],
+			"excludeTests": [
+				"checked",
+				"target"
+			]
+		},
+
+		"notify": {
+			"time": 2000
+		},
+
+		"pleeease": {
+			"rem": false,
+			"opacity": false,
+			"import": false,
+			"rebaseUrls": false,
+			"pseudoElements": true,
+			"mqpacker": true,
+			"filters": true,
+			"minifier": {
+				"preserveHacks": true,
+				"removeAllComments": false
+			},
+			"autoprefixer": {
+				"browsers": [
+					"> 1%"
+				],
+				"cascade": false
+			}
+		},
+
+		"sass": {
+			"precision": 7,
+			"outputStyle": "expanded",
+			"includePaths": [
+				"./node_modules/"
+			]
+		},
+
+		"sourcemaps": {
+			"initOptions": {
+				"largeFile": true,
+				"identityMap": false
+			},
+			"writeTo": "/"
+		},
+
+		"uglify": {
+			"mangle": false
+		}
+
+	}
+}

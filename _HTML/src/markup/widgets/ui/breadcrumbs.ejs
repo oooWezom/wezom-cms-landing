@@ -1,0 +1,22 @@
+<%
+	let list = BREADCRUMBS[filealias];
+	if (undefined === list || list.length <= 1) {
+		return '';
+	}
+-%>
+<div class="breadcrumbs">
+	<% list.forEach( (item, i) => { -%>
+		<% if (item.isLast) { -%>
+			<span>
+				<%- item.title -%>
+			</span>
+		<% } else { -%>
+			<span>
+				<a href="<%- item.href %>">
+					<%- item.title -%>
+				</a>
+			</span>
+		<% } -%>
+	<% }); -%>
+</div>
+<!-- #end breadcrumbs -->

@@ -1,0 +1,11 @@
+<!-- sitemap -->
+<nav class="sitemap">
+	<div class="title title--sub">Карта сайта</div>
+	<hr>
+	<ul>
+		<% for (let key in SITEMAP) { -%>
+			<%- partial('sitemap/item', {item: SITEMAP[key]}) -%>
+		<% } -%>
+	</ul>
+</nav>
+<!-- #end sitemap -->

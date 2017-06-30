@@ -1,0 +1,115 @@
+/*#fPopUp {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    max-width: 50%;
+    min-width: 400px;
+    display: block;
+    z-index: 99999;
+}
+#fPopUp .content {
+    font-size: 16px;
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: 0 none;
+    border-bottom-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    cursor: pointer;
+    margin: 0 20px 20px 0;
+}
+#fPopUp .content.success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+}
+#fPopUp .content.info {
+    background-color: #d7e1eb;
+    border-color: #d7e1eb;
+    color: #3f6a93;
+}
+#fPopUp .content.warning {
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    color: #8a6d3b;
+}
+#fPopUp .content.danger {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
+#fPopUp .content:hover {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom-color: rgba(0, 0, 0, 0.4);
+}*/
+
+.noty {
+    position: relative;
+    margin: 0 auto;
+    max-width: 480px;
+    height: 390px;
+    width: 90%;
+    display: block;
+    z-index: 99999;
+    background: #fff;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+}
+.noty.success .noty_img {
+    background: url(../pic/noty1.jpg) no-repeat top center;
+}
+.noty.warning .noty_img {
+    background: url(../pic/noty2.jpg) no-repeat top center;
+}
+.noty_img {
+    height: 200px;
+    position: relative;
+    line-height: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.noty_icon {
+    position: absolute;
+    height: 64px;
+    width: 64px;
+    left: 50%;
+    bottom: -32px;
+    margin-left: -32px;
+    border-radius: 64px;
+    overflow: hidden;
+    z-index: 2;
+}
+.noty.success .noty_icon {
+    background: url(../pic/noty1.png) no-repeat center center;
+}
+.noty.warning .noty_icon {
+    background: url(../pic/noty2.png) no-repeat center center;
+}
+.noty_message {
+    padding: 40px 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #fff;
+    font-family: 'MuseoSansCyrl', Arial, Helvetica, sans-serif;
+}
+.noty_title {
+    text-align: center;
+    color: #000;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 15px;
+}
+.noty_text {
+    text-align: center;
+    color: #000;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+.noty .mfp-close {color: #fff;}

@@ -1,0 +1,133 @@
+#FileETag MTime Size
+<ifmodule mod_expires.c>
+    <filesmatch ".(jpg|jpeg|gif|png|ico|css|js)$">
+        ExpiresActive on
+        ExpiresDefault "access plus 1 month"
+    </filesmatch>
+</ifmodule>
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/html
+    <IfModule mod_setenvif.c>
+        BrowserMatch ^Mozilla/4 gzip-only-text/html
+        BrowserMatch ^Mozilla/4\.0[678] no-gzip
+        BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    </IfModule>
+</IfModule>
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+	
+    RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+    RewriteRule ^/?(.*) https://%1/$1 [L,R=permanent]
+
+    RewriteCond %{THE_REQUEST} ^GET\ .*/index\.php\ HTTP
+    RewriteRule ^(.*)index\.php$ /$1 [R=301,L]
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^wezom/(.*)$ Wezom/index.php [QSA,L]
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^wezom$ Wezom/index.php [QSA,L]
+
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php [QSA,L]
+	
+
+</IfModule>
+
+Redirect 301 /ru/o-nas https://elit-web.ru/
+Redirect 301 /ru/preimuschestva https://elit-web.ru/
+Redirect 301 /ru/uslugi-i-tseny https://elit-web.ru/
+Redirect 301 /ru/kontakty https://elit-web.ru/
+Redirect 301 /ru/sozdanie-sajtov https://elit-web.ru/
+Redirect 301 /ru/prodvizhenie-sajtov https://elit-web.ru/
+Redirect 301 /ru/razrabotka-mobilnyh-prilozhenij https://elit-web.ru/
+Redirect 301 /ru/audit-sajtov https://elit-web.ru/
+Redirect 301 /ru/veb-dizajn https://elit-web.ru/
+Redirect 301 /en/o-nas https://elit-web.ru/
+Redirect 301 /en/preimuschestva https://elit-web.ru/
+Redirect 301 /ru/korporativnyj-sajt https://elit-web.ru/
+Redirect 301 /ru/promo-stranitsa https://elit-web.ru/
+Redirect 301 /ru/internet-magazin https://elit-web.ru/
+Redirect 301 /ru/poiskovoe-prodvizhenie https://elit-web.ru/
+Redirect 301 /ru/sotsialnye-seti https://elit-web.ru/
+Redirect 301 /ru/kontekstnaja-reklama https://elit-web.ru/
+Redirect 301 /ru/articles/pribylnyj-sajt-kriterii https://elit-web.ru/
+Redirect 301 /ru/articles/ispolzovanie-dopolnitelnyh-servisov-na-sajte https://elit-web.ru/
+Redirect 301 /ru/articles/kriterii-uspeshnogo-sajta https://elit-web.ru/
+Redirect 301 /ru/articles/informatsionnye-i-kommercheskie-sajty https://elit-web.ru/
+Redirect 301 /en/kontakty https://elit-web.ru/
+Redirect 301 /en/sozdanie-sajtov https://elit-web.ru/
+Redirect 301 /en/razrabotka-mobilnyh-prilozhenij https://elit-web.ru/
+Redirect 301 /en/prodvizhenie-sajtov https://elit-web.ru/
+Redirect 301 /en/audit-sajtov https://elit-web.ru/
+Redirect 301 /en/veb-dizajn https://elit-web.ru/
+Redirect 301 /en/korporativnyj-sajt https://elit-web.ru/
+Redirect 301 /en/promo-stranitsa https://elit-web.ru/
+Redirect 301 /en/internet-magazin https://elit-web.ru/
+Redirect 301 /en/poiskovoe-prodvizhenie https://elit-web.ru/
+Redirect 301 /en/sotsialnye-seti https://elit-web.ru/
+Redirect 301 /en/kontekstnaja-reklama https://elit-web.ru/
+Redirect 301 /en/articles/pribylnyj-sajt-kriterii https://elit-web.ru/
+Redirect 301 /en/articles/ispolzovanie-dopolnitelnyh-servisov-na-sajte https://elit-web.ru/
+Redirect 301 /en/articles/pravilnaja-struktura-sajta https://elit-web.ru/
+Redirect 301 /en/articles/kriterii-uspeshnogo-sajta https://elit-web.ru/
+Redirect 301 /en/articles/informatsionnye-i-kommercheskie-sajty https://elit-web.ru/
+Redirect 301 /ru/portfolio/automarketonlajn-servis-po-poisku-avtozapchastej https://elit-web.ru/
+Redirect 301 /ru/portfolio/bdzhola https://elit-web.ru/
+Redirect 301 /ru/portfolio/internet-magazin-sportivnoj-obuvi-i-odezhdy-airpac https://elit-web.ru/
+Redirect 301 /ru/portfolio/juridicheskij-tsentr-garant https://elit-web.ru/
+Redirect 301 /ru/portfolio/internet-magazin-osim https://elit-web.ru/
+Redirect 301 /ru/portfolio/wellteam-marine-crew-management https://elit-web.ru/
+Redirect 301 /ru/portfolio/pallet-export https://elit-web.ru/
+Redirect 301 /ru/portfolio/med-classiccom-international-medical-service https://elit-web.ru/
+Redirect 301 /ru/portfolio/akademija-chastnoj-zhizni https://elit-web.ru/
+Redirect 301 /ru/portfolio/internet-magazin-kollektsionnyh-masshtabnyh-avtomobilej https://elit-web.ru/
+Redirect 301 /ru/portfolio/mebelnaja-kompanija-sivs https://elit-web.ru/
+Redirect 301 /ru/portfolio/sajt-platezhnogo-servisa-monexy https://elit-web.ru/
+Redirect 301 /ru/portfolio/ljube https://elit-web.ru/
+Redirect 301 /ru/portfolio/piconsult https://elit-web.ru/
+Redirect 301 /en/uslugi-i-tseny https://elit-web.ru/
+Redirect 301 /ru/portfolio/promozone-kids https://elit-web.ru/
+Redirect 301 /ru/portfolio/wezommobi https://elit-web.ru/
+Redirect 301 /ru/portfolio/fifth-ocean-yachts-stroitelstvo-elitnyh-jaht https://elit-web.ru/
+Redirect 301 /ru/portfolio/linkprofit https://elit-web.ru/
+Redirect 301 /en/portfolio/automarketonlajn-servis-po-poisku-avtozapchastej https://elit-web.ru/
+Redirect 301 /en/portfolio/bdzhola https://elit-web.ru/
+Redirect 301 /en/portfolio/juridicheskij-tsentr-garant https://elit-web.ru/
+Redirect 301 /en/portfolio/internet-magazin-osim https://elit-web.ru/
+Redirect 301 /en/portfolio/wellteam-marine-crew-management https://elit-web.ru/
+Redirect 301 /en/portfolio/pallet-export https://elit-web.ru/
+Redirect 301 /en/portfolio/med-classiccom-international-medical-service https://elit-web.ru/
+Redirect 301 /en/portfolio/akademija-chastnoj-zhizni https://elit-web.ru/
+Redirect 301 /en/portfolio/internet-magazin-kollektsionnyh-masshtabnyh-avtomobilej https://elit-web.ru/
+Redirect 301 /en/portfolio/mebelnaja-kompanija-sivs https://elit-web.ru/
+Redirect 301 /en/portfolio/sajt-platezhnogo-servisa-monexy https://elit-web.ru/
+Redirect 301 /en/portfolio/ljube https://elit-web.ru/
+Redirect 301 /en/portfolio/promozone-kids https://elit-web.ru/
+Redirect 301 /en/portfolio/piconsult https://elit-web.ru/
+Redirect 301 /en/portfolio/wezommobi https://elit-web.ru/
+Redirect 301 /en/portfolio/fifth-ocean-yachts-stroitelstvo-elitnyh-jaht https://elit-web.ru/
+Redirect 301 /en/portfolio/linkprofit https://elit-web.ru/
+Redirect 301 /ru/articles/pravilnaja-struktura-sajta https://elit-web.ru/
+Redirect 301 /en/portfolio/internet-magazin-sportivnoj-obuvi-i-odezhdy-airpac https://elit-web.ru/
+Redirect 301 /ru/articles https://elit-web.ru/
+Redirect 301 /en/articles https://elit-web.ru/
+Redirect 301 /ru/portfolio https://elit-web.ru/
+Redirect 301 /en/portfolio https://elit-web.ru/
+Redirect 301 /en https://elit-web.ru/
+Redirect 301 /ru/articles/zachem-nuzhen-sajt https://elit-web.ru
+Redirect 301 /ru/portfolio/page/2 https://elit-web.ru
+Redirect 301 /ru/articles/kak-sdelat-udobnoe-juzabiliti-sajta https://elit-web.ru
+Redirect 301 /en/portfolio/page/2 https://elit-web.ru
+Redirect 301 /en/articles/zachem-nuzhen-sajt https://elit-web.ru
+Redirect 301 /en/articles/kak-sdelat-udobnoe-juzabiliti-sajta https://elit-web.ru

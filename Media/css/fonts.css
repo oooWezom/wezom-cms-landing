@@ -1,0 +1,30 @@
+@font-face {
+	font-family: 'Roboto';
+	src: url("fonts/RobotoThin.woff") format("woff"), url("../fonts/RobotoThin.woff2") format("woff2");
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url("fonts/RobotoLight.woff") format("woff"), url("../fonts/RobotoLight.woff2") format("woff2");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url("fonts/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url("fonts/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold.woff2") format("woff2");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Cambria';
+	src: url("fonts/CambriaItalic.woff") format("woff"), url("../fonts/CambriaItalic.woff2") format("woff2");
+	font-weight: normal;
+	font-style: italic;
+}

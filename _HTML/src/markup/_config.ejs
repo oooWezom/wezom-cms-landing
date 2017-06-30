@@ -1,0 +1,37 @@
+<%
+	locals.CONFIG_MTIME_CHANGED = false;
+
+	if ( locals.CONFIG_MTIME_REMEMBER !== CONFIG_MTIME ) {
+		locals.CONFIG_MTIME_REMEMBER = CONFIG_MTIME;
+		locals.CONFIG_MTIME_CHANGED = true;
+	}
+
+	locals.CONFIG_CHANGED = ( COMPONENTS || CONFIG_MTIME_CHANGED );
+
+	if (CONFIG_CHANGED) {
+-%>
+		<% // конфиги -%>
+		<% include configs/views -%>
+		<% include configs/ignored-views -%>
+		<% include configs/flags -%>
+		<% include configs/system -%>
+		<% // контроллеры -%>
+		<% include controls/utils -%>
+		<% include controls/parse-views -%>
+<% }
+
+	// Активная вьюха
+	locals.VIEW_ACTIVE = VIEWS[filealias] || {};
+
+	// В игноре для VIEWS
+	let isHidden = /hidden/.test(filename);
+
+	if (!isHidden) {
+		let isIgnoredView = ( IGNORE_VIEWS.indexOf(filealias) === -1 );
+		let viewsNotHasBranch = ( undefined === VIEWS[ filealias ] );
+		if (viewsNotHasBranch && isIgnoredView) {
+			let errorMsg = ___('ejsErrorNoView', [filealias]);
+			throw errorMsg.join('\n\t');
+		}
+	}
+-%>

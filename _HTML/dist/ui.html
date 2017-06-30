@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="ru-RU" dir="ltr" class="no-js">
+	<head>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>UI Раздел - Верстка | (c) Wezom | www.wezom.com.ua</title>
+
+	<!-- www.wezom.com.ua -->
+	<!-- cms-wezom -->
+	<!-- no description -->
+	<!-- Open Graph -->
+	<meta property="og:title" content="Заголовок страницы">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="site.com">
+	<meta property="og:url" content="http://site.com/current-page">
+	<meta property="og:description" content="краткий текст (новости, товара и т.д)">
+
+
+<!-- Touch -->
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+
+
+
+	<!-- Responsive -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png?v=12d334">
+<link rel="icon" type="image/png" href="./favicons/favicon-32x32.png?v=12d334" sizes="32x32">
+<link rel="icon" type="image/png" href="./favicons/favicon-16x16.png?v=12d334" sizes="16x16">
+<link rel="manifest" href="./favicons/manifest.json?v=12d334">
+<link rel="mask-icon" href="./favicons/safari-pinned-tab.svg?v=12d334" color="#5bbad5">
+<link rel="shortcut icon" href="./favicons/favicon.ico?v=12d334">
+<meta name="msapplication-config" content="./favicons/browserconfig.xml?v=12d334">
+<meta name="theme-color" content="#ffffff">
+
+
+				<!-- localstorage-test.js -->
+		<script>"use strict";!function(win){function testLocal(testKey){try{return localStorage.setItem(testKey,testKey),localStorage.removeItem(testKey),!0}catch(e){return!1}}win.localSupport=testLocal("test-key"),win.localWrite=function(key,val){try{localStorage.setItem(key,val)}catch(e){if(e==QUOTA_EXCEEDED_ERR)return!1}}}(window);</script>
+	<!-- svg4everybody.js -->
+	<script>!function(a,b){"function"==typeof define&&define.amd?define([],function(){return a.svg4everybody=b()}):"object"==typeof exports?module.exports=b():a.svg4everybody=b()}(this,function(){function a(a,b){if(b){var c=document.createDocumentFragment(),d=!a.getAttribute("viewBox")&&b.getAttribute("viewBox");d&&a.setAttribute("viewBox",d);for(var e=b.cloneNode(!0);e.childNodes.length;)c.appendChild(e.firstChild);a.appendChild(c)}}function b(b){b.onreadystatechange=function(){if(4===b.readyState){var c=b._cachedDocument;c||(c=b._cachedDocument=document.implementation.createHTMLDocument(""),c.body.innerHTML=b.responseText,b._cachedTarget={}),b._embeds.splice(0).map(function(d){var e=b._cachedTarget[d.id];e||(e=b._cachedTarget[d.id]=c.getElementById(d.id)),a(d.svg,e)})}},b.onreadystatechange()}function c(c){function d(){for(var c=0;c<l.length;){var g=l[c],h=g.parentNode;if(h&&/svg/i.test(h.nodeName)){var i=g.getAttribute("xlink:href");if(e&&(!f.validate||f.validate(i,h,g))){h.removeChild(g);var m=i.split("#"),n=m.shift(),o=m.join("#");if(n.length){var p=j[n];p||(p=j[n]=new XMLHttpRequest,p.open("GET",n),p.send(),p._embeds=[]),p._embeds.push({svg:h,id:o}),b(p)}else a(h,document.getElementById(o))}}else++c}k(d,67)}var e,f=Object(c),g=/\bTrident\/[567]\b|\bMSIE (?:9|10)\.0\b/,h=/\bAppleWebKit\/(\d+)\b/,i=/\bEdge\/12\.(\d+)\b/;e="polyfill"in f?f.polyfill:g.test(navigator.userAgent)||(navigator.userAgent.match(i)||[])[1]<10547||(navigator.userAgent.match(h)||[])[1]<537;var j={},k=window.requestAnimationFrame||setTimeout,l=document.getElementsByTagName("use");e&&d()}return c});</script>
+	<script>document.addEventListener("DOMContentLoaded", function() { svg4everybody({}); });</script>
+
+	<!-- saved from url=(0014)about:internet -->
+<!--[if IE]><meta http-equiv="imagetoolbar" content="no"><![endif]-->
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+	</head>
+	<body>
+		<div class="view-wrapper">
+
+						<section class="view-section">
+				<div class="widget">
+					<div class="view-size">
+						<div class="breadcrumbs">
+						<span>
+				<a href="index.html">
+					Главная страница				</a>
+			</span>
+								<span>
+				UI Раздел			</span>
+			</div>
+<!-- #end breadcrumbs -->
+					</div>
+				</div>
+				<!-- #end widget -->
+			</section>
+			
+			<!-- view-body -->
+			<section class="view-section">
+	<div class="widget">
+		<div class="view-size">
+			<div class="view-text _mb-def">
+				<h3>Содежание</h3>
+				<ul>
+											<li>
+							<a href="#anchor-0">Хлебные Крошки</a>
+						</li>
+											<li>
+							<a href="#anchor-1">Сет цветов</a>
+						</li>
+											<li>
+							<a href="#anchor-2">Сет цветов соц. сетей</a>
+						</li>
+											<li>
+							<a href="#anchor-3">Кнопки</a>
+						</li>
+											<li>
+							<a href="#anchor-4">Пагинация</a>
+						</li>
+											<li>
+							<a href="#anchor-5">Magnific popup</a>
+						</li>
+									</ul>
+			</div>
+			<hr class="_mb-xl">
+		</div>
+	</div>
+	<!-- #end widget -->
+
+			<div class="widget">
+			<div class="view-size">
+				<div class="title title--sub">
+					<a id="anchor-0" href="#anchor-0">#</a>
+					<a id="anchor-0" href="#">▲</a>
+					Хлебные Крошки
+				</div>
+				<div class="_mb-xl">
+					<div class="breadcrumbs">
+						<span>
+				<a href="index.html">
+					Главная страница				</a>
+			</span>
+								<span>
+				UI Раздел			</span>
+			</div>
+<!-- #end breadcrumbs -->
+<pre class="line-numbers language-markup"><code>&lt;%- partial('ui/breadcrumbs') %&gt;</code></pre>				</div>
+				<hr class="_mb-xl">
+			</div>
+		</div>
+		<!-- #end widget -->
+			<div class="widget">
+			<div class="view-size">
+				<div class="title title--sub">
+					<a id="anchor-1" href="#anchor-1">#</a>
+					<a id="anchor-1" href="#">▲</a>
+					Сет цветов
+				</div>
+				<div class="_mb-xl">
+					<div class="grid grid--1 grid--md-4 grid--lg-7" style="color: #fff; text-shadow: 0 0 5px #000">
+			<div class="gcell _p-def _text-center _bgcolor-black">
+			<code>black</code>
+		</div>
+			<div class="gcell _p-def _text-center _bgcolor-gray90">
+			<code>gray90</code>
+		</div>
+			<div class="gcell _p-def _text-center _bgcolor-gray75">
+			<code>gray75</code>
+		</div>
+			<div class="gcell _p-def _text-center _bgcolor-gray50">
+			<code>gray50</code>
+		</div>
+			<div class="gcell _p-def _text-center _bgcolor-gray25">
+			<code>gray25</code>
+		</div>
+			<div class="gcell _p-def _text-center _bgcolor-gray10">
+			<code>gray10</code>
+		</div>
+			<div class="gcell _p-def _text-center _bgcolor-white">
+			<code>white</code>
+		</div>
+			<div class="gcell _p-def _text-center _bgcolor-link">
+			<code>link</code>
+		</div>
+			<div class="gcell _p-def _text-center _bgcolor-primary">
+			<code>primary</code>
+		</div>
+			<div class="gcell _p-def _text-center _bgcolor-secondary">
+			<code>secondary</code>
+		</div>
+			<div class="gcell _p-def _text-center _bgcolor-success">
+			<code>success</code>
+		</div>
+			<div class="gcell _p-def _text-center _bgcolor-info">
+			<code>info</code>
+		</div>
+			<div class="gcell _p-def _text-center _bgcolor-warning">
+			<code>warning</code>
+		</div>
+			<div class="gcell _p-def _text-center _bgcolor-danger">
+			<code>danger</code>
+		</div>
+	</div>				</div>
+				<hr class="_mb-xl">
+			</div>
+		</div>
+		<!-- #end widget -->
+			<div class="widget">
+			<div class="view-size">
+				<div class="title title--sub">
+					<a id="anchor-2" href="#anchor-2">#</a>
+					<a id="anchor-2" href="#">▲</a>
+					Сет цветов соц. сетей
+				</div>
+				<div class="_mb-xl">
+					<div class="view-text _mb-def">
+	<p>SASS wвета, которые находяться в карте <code>$palette-social</code>. <br>Еслn нужен какой-то цвет, используй метод <code class="language-scss">color: map-get( $palette-social, <em>key</em> );</code></p>
+</div>
+<div class="grid grid--1 grid--md-2 grid--lg-4" style="color: #fff; text-shadow: 0 0 5px #000">
+					<div class="gcell _p-def _text-center" style="background-color: #f58220;">
+			<code>map-get( $palette-social, <em>blogger</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #763c34;">
+			<code>map-get( $palette-social, <em>bobrdobr</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #003bd8;">
+			<code>map-get( $palette-social, <em>delicious</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #165495;">
+			<code>map-get( $palette-social, <em>digg</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #75bb1e;">
+			<code>map-get( $palette-social, <em>evernote</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #3b5998;">
+			<code>map-get( $palette-social, <em>facebook</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #4693d7;">
+			<code>map-get( $palette-social, <em>formspring-me</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #246df8;">
+			<code>map-get( $palette-social, <em>google-bookmarks-old</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #dd5044;">
+			<code>map-get( $palette-social, <em>google-plus</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #325c86;">
+			<code>map-get( $palette-social, <em>instagram</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #6b6b6b;">
+			<code>map-get( $palette-social, <em>instapaper</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #b98337;">
+			<code>map-get( $palette-social, <em>juick</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #007ab5;">
+			<code>map-get( $palette-social, <em>linked-in</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #27819b;">
+			<code>map-get( $palette-social, <em>liveinternet</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #6899c4;">
+			<code>map-get( $palette-social, <em>livejournal</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #2f69a1;">
+			<code>map-get( $palette-social, <em>mail-ru</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #fd2668;">
+			<code>map-get( $palette-social, <em>memori</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #1d1d1d;">
+			<code>map-get( $palette-social, <em>myspace</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #f58220;">
+			<code>map-get( $palette-social, <em>odnoklassniki</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #cb2027;">
+			<code>map-get( $palette-social, <em>pinterest</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #9d0000;">
+			<code>map-get( $palette-social, <em>readability</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #fb7629;">
+			<code>map-get( $palette-social, <em>rss</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #f7b42f;">
+			<code>map-get( $palette-social, <em>springpad</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #ed4713;">
+			<code>map-get( $palette-social, <em>stumbleupon</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #14aef8;">
+			<code>map-get( $palette-social, <em>surfingbird</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #2e4e67;">
+			<code>map-get( $palette-social, <em>tumblr</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #64a8f2;">
+			<code>map-get( $palette-social, <em>twitter</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #41658b;">
+			<code>map-get( $palette-social, <em>vk</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #8bc514;">
+			<code>map-get( $palette-social, <em>webdiscover</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color: #7b0099;">
+			<code>map-get( $palette-social, <em>yahoo</em> );</code>
+		</div>
+					<div class="gcell _p-def _text-center" style="background-color:  #cd201f;">
+			<code>map-get( $palette-social, <em>youtube</em> );</code>
+		</div>
+	</div>				</div>
+				<hr class="_mb-xl">
+			</div>
+		</div>
+		<!-- #end widget -->
+			<div class="widget">
+			<div class="view-size">
+				<div class="title title--sub">
+					<a id="anchor-3" href="#anchor-3">#</a>
+					<a id="anchor-3" href="#">▲</a>
+					Кнопки
+				</div>
+				<div class="_mb-xl">
+					
+
+<div class="view-text">
+	<p>Базовые стили в файлу <code>src/sass/_partials/buttons-base.scss</code>. Примеры разметки:</p>
+	<div class="grid grid--1 grid--space-md">
+
+					
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button">
+	<span>
+	<span>Lorem</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button">
+	&lt;span>
+	&lt;span>Lorem&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button">
+	<span>
+	<span>button</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "button"
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button">
+	&lt;span>
+	&lt;span>button&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell _mb-sm">
+					<em>Кнопки с иконками слева и справа</em>
+				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#arrow-left" />
+		</svg>
+	<span>button</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "button",
+	"before": "arrow-left"
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#arrow-left" />
+		&lt;/svg>
+	&lt;span>button&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button">
+	<span>
+	<span>button</span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#arrow-right" />
+		</svg>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "button",
+	"after": "arrow-right"
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button">
+	&lt;span>
+	&lt;span>button&lt;/span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#arrow-right" />
+		&lt;/svg>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell _mb-sm">
+					<em>Активнaя и отключеная (атрибут <code>disabled</code> или класс <code>is-disabled</code>)</em>
+				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button is-active">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>is-active</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "is-active",
+	"before": "wezom-logo",
+	"classes": [
+		"is-active"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button is-active">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>is-active&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button is-disabled">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>is-disabled</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "is-disabled",
+	"before": "wezom-logo",
+	"classes": [
+		"is-disabled"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button is-disabled">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>is-disabled&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell _mb-sm">
+					<em>Кнопки с любыми атрибутами</em>
+				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button js-mfp-ajax" data-param='{"key1":"value-1","key2":123.54,"key3":false,"key4":null}' data-url="hidden/test.php">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#arrow-up" />
+		</svg>
+	<span>js-mfp-ajax</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "js-mfp-ajax",
+	"before": "arrow-up",
+	"classes": [
+		"js-mfp-ajax"
+	],
+	"attrs": {
+		"data-url": "hidden/test.php",
+		"data-param": {
+			"key1": "value-1",
+			"key2": 123.54,
+			"key3": false,
+			"key4": null
+		}
+	}
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button js-mfp-ajax" data-param='{"key1":"value-1","key2":123.54,"key3":false,"key4":null}' data-url="hidden/test.php">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#arrow-up" />
+		&lt;/svg>
+	&lt;span>js-mfp-ajax&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button" onclick="alert( this.title )" title="Lorem ipsum dolor sit amet.">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#arrow-down" />
+		</svg>
+	<span>click me</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "click me",
+	"before": "arrow-down",
+	"attrs": {
+		"title": "Lorem ipsum dolor sit amet.",
+		"onclick": "alert( this.title )"
+	}
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button" onclick="alert( this.title )" title="Lorem ipsum dolor sit amet.">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#arrow-down" />
+		&lt;/svg>
+	&lt;span>click me&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell _mb-sm">
+					<em>Кнопки с цветовыми статусами</em>
+				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--primary">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>primary</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "primary",
+	"before": "wezom-logo",
+	"classes": [
+		"button--primary"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--primary">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>primary&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--secondary">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>secondary</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "secondary",
+	"before": "wezom-logo",
+	"classes": [
+		"button--secondary"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--secondary">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>secondary&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--info">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>info</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "info",
+	"before": "wezom-logo",
+	"classes": [
+		"button--info"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--info">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>info&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--success">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>success</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "success",
+	"before": "wezom-logo",
+	"classes": [
+		"button--success"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--success">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>success&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--warning">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>warning</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "warning",
+	"before": "wezom-logo",
+	"classes": [
+		"button--warning"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--warning">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>warning&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--danger">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>danger</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "danger",
+	"before": "wezom-logo",
+	"classes": [
+		"button--danger"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--danger">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>danger&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell _mb-sm">
+					<em>Кнопки на всю ширину</em>
+				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--expand-text">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>button--expand-text</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "button--expand-text",
+	"before": "wezom-logo",
+	"classes": [
+		"button--expand-text"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--expand-text">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>button--expand-text&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--expand-element">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>button--expand-element</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "button--expand-element",
+	"before": "wezom-logo",
+	"classes": [
+		"button--expand-element"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--expand-element">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>button--expand-element&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell _mb-sm">
+					<em>Кнопки с размерами</em>
+				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--sm-size">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>sm-size</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "sm-size",
+	"before": "wezom-logo",
+	"classes": [
+		"button--sm-size"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--sm-size">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>sm-size&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--md-size">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>md-size</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "md-size",
+	"before": "wezom-logo",
+	"classes": [
+		"button--md-size"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--md-size">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>md-size&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--lg-size">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>lg-size</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "lg-size",
+	"before": "wezom-logo",
+	"classes": [
+		"button--lg-size"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--lg-size">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>lg-size&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--xl-size">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>xl-size</span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "xl-size",
+	"before": "wezom-logo",
+	"classes": [
+		"button--xl-size"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--xl-size">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>xl-size&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell _mb-sm">
+					<em>Только иконка и схлопывание текста до иконки на брейпоинтах (список брейкпоинтов из <code>_config.scss</code>)</em>
+				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--only-icon">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "only-icon",
+	"before": "wezom-logo",
+	"classes": [
+		"button--only-icon"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--only-icon">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--mg-only-icon">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>сделай ресайз до <code>mg</code></span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "сделай ресайз до &lt;code>mg&lt;/code>",
+	"before": "wezom-logo",
+	"classes": [
+		"button--mg-only-icon"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--mg-only-icon">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>сделай ресайз до &lt;code>mg&lt;/code>&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--xl-only-icon">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>сделай ресайз до <code>xl</code></span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "сделай ресайз до &lt;code>xl&lt;/code>",
+	"before": "wezom-logo",
+	"classes": [
+		"button--xl-only-icon"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--xl-only-icon">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>сделай ресайз до &lt;code>xl&lt;/code>&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--lg-only-icon">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>сделай ресайз до <code>lg</code></span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "сделай ресайз до &lt;code>lg&lt;/code>",
+	"before": "wezom-logo",
+	"classes": [
+		"button--lg-only-icon"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--lg-only-icon">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>сделай ресайз до &lt;code>lg&lt;/code>&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--md-only-icon">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>сделай ресайз до <code>md</code></span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "сделай ресайз до &lt;code>md&lt;/code>",
+	"before": "wezom-logo",
+	"classes": [
+		"button--md-only-icon"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--md-only-icon">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>сделай ресайз до &lt;code>md&lt;/code>&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--ms-only-icon">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>сделай ресайз до <code>ms</code></span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "сделай ресайз до &lt;code>ms&lt;/code>",
+	"before": "wezom-logo",
+	"classes": [
+		"button--ms-only-icon"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--ms-only-icon">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>сделай ресайз до &lt;code>ms&lt;/code>&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--sm-only-icon">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>сделай ресайз до <code>sm</code></span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "сделай ресайз до &lt;code>sm&lt;/code>",
+	"before": "wezom-logo",
+	"classes": [
+		"button--sm-only-icon"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--sm-only-icon">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>сделай ресайз до &lt;code>sm&lt;/code>&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+								
+				<div class="gcell gcell--md-6 _mb-md">
+										<button class="button button--xs-only-icon">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#wezom-logo" />
+		</svg>
+	<span>сделай ресайз до <code>xs</code></span>
+	</span>
+</button>					<pre class="line-numbers language-markup"><code>&lt;!-- ejs -->
+&lt;%- partial('buttons/_sample', {
+	"text": "сделай ресайз до &lt;code>xs&lt;/code>",
+	"before": "wezom-logo",
+	"classes": [
+		"button--xs-only-icon"
+	]
+}) -%&gt;</code></pre>					<pre class="line-numbers language-markup"><code>&lt;!-- compile -->
+&lt;button class="button button--xs-only-icon">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#wezom-logo" />
+		&lt;/svg>
+	&lt;span>сделай ресайз до &lt;code>xs&lt;/code>&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre>				</div>
+
+						</div>
+</div>				</div>
+				<hr class="_mb-xl">
+			</div>
+		</div>
+		<!-- #end widget -->
+			<div class="widget">
+			<div class="view-size">
+				<div class="title title--sub">
+					<a id="anchor-4" href="#anchor-4">#</a>
+					<a id="anchor-4" href="#">▲</a>
+					Пагинация
+				</div>
+				<div class="_mb-xl">
+					<div class="pagination">
+	<div class="buttons-group buttons-group--center">
+						<a class="button button--only-icon" href="ui.html">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#arrow-left" />
+		</svg>
+	</span>
+</a>		<a class="button" href="ui.html">
+	<span>
+	<span>2</span>
+	</span>
+</a>		<span class="button is-active">
+	<span>
+	<span>3</span>
+	</span>
+</span>		<a class="button" href="ui.html">
+	<span>
+	<span>4</span>
+	</span>
+</a>		<span class="button button--disabled">
+	<span>
+	<span>...</span>
+	</span>
+</span>		<a class="button" href="ui.html">
+	<span>
+	<span>12</span>
+	</span>
+</a>		<a class="button" href="ui.html">
+	<span>
+	<span>13</span>
+	</span>
+</a>		<a class="button button--only-icon" href="ui.html">
+	<span>
+		<svg>
+			<use xlink:href="svg/sprite.svg#arrow-right" />
+		</svg>
+	</span>
+</a>	</div>
+</div>
+<!-- pagination -->
+<pre class="line-numbers language-markup"><code>&lt;div class="pagination">
+	&lt;div class="buttons-group buttons-group--center">
+						&lt;a class="button button--only-icon" href="ui.html">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#arrow-left" />
+		&lt;/svg>
+	&lt;/span>
+&lt;/a>		&lt;a class="button" href="ui.html">
+	&lt;span>
+	&lt;span>2&lt;/span>
+	&lt;/span>
+&lt;/a>		&lt;span class="button is-active">
+	&lt;span>
+	&lt;span>3&lt;/span>
+	&lt;/span>
+&lt;/span>		&lt;a class="button" href="ui.html">
+	&lt;span>
+	&lt;span>4&lt;/span>
+	&lt;/span>
+&lt;/a>		&lt;span class="button button--disabled">
+	&lt;span>
+	&lt;span>...&lt;/span>
+	&lt;/span>
+&lt;/span>		&lt;a class="button" href="ui.html">
+	&lt;span>
+	&lt;span>12&lt;/span>
+	&lt;/span>
+&lt;/a>		&lt;a class="button" href="ui.html">
+	&lt;span>
+	&lt;span>13&lt;/span>
+	&lt;/span>
+&lt;/a>		&lt;a class="button button--only-icon" href="ui.html">
+	&lt;span>
+		&lt;svg>
+			&lt;use xlink:href="svg/sprite.svg#arrow-right" />
+		&lt;/svg>
+	&lt;/span>
+&lt;/a>	&lt;/div>
+&lt;/div>
+&lt;!-- pagination -->
+</code></pre>				</div>
+				<hr class="_mb-xl">
+			</div>
+		</div>
+		<!-- #end widget -->
+			<div class="widget">
+			<div class="view-size">
+				<div class="title title--sub">
+					<a id="anchor-5" href="#anchor-5">#</a>
+					<a id="anchor-5" href="#">▲</a>
+					Magnific popup
+				</div>
+				<div class="_mb-xl">
+					
+<div class="_mb-md">
+	<button class="button js-mfp-ajax" data-param='{"key1":"value-1"}' data-url="hidden/test.php">
+	<span>
+	<span>js-mfp-ajax</span>
+	</span>
+</button>	<pre class="line-numbers language-markup"><code>&lt;%- partial('buttons/js-mfp-ajax') -%&gt;</code></pre>	<pre class="line-numbers language-markup"><code>&lt;button class="button js-mfp-ajax" data-param='{"key1":"value-1"}' data-url="hidden/test.php">
+	&lt;span>
+	&lt;span>js-mfp-ajax&lt;/span>
+	&lt;/span>
+&lt;/button></code></pre></div>
+<div class="_mb-md">
+	
+<button class="button js-mfp-inline" data-mfp-src="#demo-js-mfp-inline">
+	<span>
+		<span>js-mfp-inline</span>
+	</span>
+</button>
+	<pre class="line-numbers language-markup"><code>
+&lt;button class="button js-mfp-inline" data-mfp-src="#demo-js-mfp-inline">
+	&lt;span>
+		&lt;span>js-mfp-inline&lt;/span>
+	&lt;/span>
+&lt;/button>
+</code></pre>
+	
+<div hidden>
+	<div id="demo-js-mfp-inline" class="hidden-wrapper hidden-wrapper--sm">
+		<div class="title title--sub">mfp-inline</div>
+		<hr>
+		<div class="view-text">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Vitae numquam id inventore odio ipsum dolore natus,
+				temporibus ad nobis quibusdam quaerat, voluptatem explicabo architecto quis?
+			</p>
+			<p>
+				<a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">http://dimsemenov.com/plugins/magnific-popup/</a>
+			</p>
+		</div>
+	</div>
+</div>
+	<pre class="line-numbers language-markup"><code>
+&lt;div hidden>
+	&lt;div id="demo-js-mfp-inline" class="hidden-wrapper hidden-wrapper--sm">
+		&lt;div class="title title--sub">mfp-inline&lt;/div>
+		&lt;hr>
+		&lt;div class="view-text">
+			&lt;p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Vitae numquam id inventore odio ipsum dolore natus,
+				temporibus ad nobis quibusdam quaerat, voluptatem explicabo architecto quis?
+			&lt;/p>
+			&lt;p>
+				&lt;a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">http://dimsemenov.com/plugins/magnific-popup/&lt;/a>
+			&lt;/p>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+</code></pre></div>				</div>
+				<hr class="_mb-xl">
+			</div>
+		</div>
+		<!-- #end widget -->
+	
+</section>
+			<!-- #end view-body -->
+
+			<footer class="view-footer">
+	<div class="view-size">
+		<div class="footer-top">
+			<div class="footer-top__text">
+				<div class="question">Остались вопросы? Позвоните нам</div>
+				<a href="tel:0800751271" class="phone">0-800-751-271</a>
+				<a href="mailto:office@wezom.com.ua" class="email">office@wezom.com.ua</a>
+			</div>
+		</div>
+		<div class="footer-bot">
+			<a href="http://wezom.com.ua" target="_blank">© 2017 Wezom.CMS</a>
+		</div>
+	</div>
+</footer>
+			<!-- #end view-footer -->
+		</div>
+
+		<link rel="stylesheet" href="css/vendor/jquery-plugins.css">
+		<link rel="stylesheet" href="css/fonts.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/responsive.css">
+		<script src="js/vendor/modernizr.js"></script>
+		<script src="js/vendor/jquery.js"></script>
+		<script src="js/vendor/jquery-plugins.js"></script>
+		<script src="js/init.js"></script>
+
+		<!-- @TODO @all Демо скрипт с переводами, в основном для jquery-validate. заменить на программный файл, который должен содержать глобальный объект `validationTranslate` -->
+		<script src="js/programmer/translate-ru.js"></script>
+
+			<!-- @TODO Демо скрипты и стили только для ui страниц -->
+	<link rel="stylesheet" href="demo-files/svglist.css">
+	<link rel="stylesheet" href="demo-files/prism.css">
+	<script src="demo-files/prism.js"></script>
+	<script src="demo-files/clipboard.js"></script>
+
+	<script>
+		var clipboard = new Clipboard('.js-clipboard', {
+			action: 'copy'
+		});
+	</script>
+
+	<!--wold.js settings -->
+	<!-- @TODO @all Изменить путь к изображению на относительный от корня сайта, в переменной `$wzmOld_URL_IMG` -->
+	<script>var $wzmOld_URL_IMG = 'css/pic/wezom-info-red.gif';</script>
+	<script async="async" defer="defer" src="js/wold.js"></script>
+
+	<!-- noscript-msg -->
+	<noscript>
+		<link rel="stylesheet" href="css/noscript-msg.css">
+		<input id="noscript-msg__close" type="checkbox" title="Закрити">
+		<div id="noscript-msg">
+			<label id="noscript-msg__times" for="noscript-msg__close" title="Закрити">&times;</label>
+			<a href="http://wezom.com.ua/" target="_blank" title="Cтудія Wezom" id="noscript-msg__link">&nbsp;</a>
+			<div id="noscript-msg__block">
+				<div id="noscript-msg__text">
+					<p>В Вашем браузере отключен <strong>JavaScript</strong>! Для корректной работы с сайтом необходима поддержка Javascript.</p>
+					<p>Мы рекомендуем Вам включить использование JavaScript в настройках вашего браузера.</p>
+				</div>
+			</div>
+		</div>
+	</noscript>
+
+				
+	</body>
+</html>
+

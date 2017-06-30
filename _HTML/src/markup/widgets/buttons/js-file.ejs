@@ -1,0 +1,13 @@
+<%
+	let html = `
+<span class="js-file__result" data-text='{"default": "Выберите файл", "changed": "Выбранный файл: %s (%s)"}'>Выберите файл</span>
+	`
+-%>
+<%- partial('buttons/_sample', {
+	tag: 'span',
+	html: html,
+	after: 'arrow-right',
+	classes: [
+		'button--expand-element'
+	]
+}) -%>

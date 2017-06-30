@@ -1,0 +1,49 @@
+<%
+let buttonCode1 = `
+<button class="button js-mfp-ajax" data-url="hidden/test.php" data-param='{"key": "value"}'>
+	<span>
+		<span>js-mfp-ajax</span>
+	</span>
+</button>
+`;
+
+let buttonCode2 = `
+<button class="button js-mfp-inline" data-mfp-src="#demo-js-mfp-inline">
+	<span>
+		<span>js-mfp-inline</span>
+	</span>
+</button>
+`;
+
+let hiddenCode = `
+<div hidden>
+	<div id="demo-js-mfp-inline" class="hidden-wrapper hidden-wrapper--sm">
+		<div class="title title--sub">mfp-inline</div>
+		<hr>
+		<div class="view-text">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Vitae numquam id inventore odio ipsum dolore natus,
+				temporibus ad nobis quibusdam quaerat, voluptatem explicabo architecto quis?
+			</p>
+			<p>
+				<a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">http://dimsemenov.com/plugins/magnific-popup/</a>
+			</p>
+		</div>
+	</div>
+</div>
+`;
+-%>
+
+<div class="_mb-md">
+	<%- partial('buttons/js-mfp-ajax') -%>
+	<%- Utils.print( `&lt;%- partial('buttons/js-mfp-ajax') -%&gt;` ) -%>
+	<%- Utils.print( partial('buttons/js-mfp-ajax') ) -%>
+</div>
+<div class="_mb-md">
+	<%- buttonCode2 -%>
+	<%- Utils.print( buttonCode2 ) -%>
+
+	<%- hiddenCode -%>
+	<%- Utils.print( hiddenCode ) -%>
+</div>

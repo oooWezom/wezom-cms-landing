@@ -1,0 +1,236 @@
+<%
+_Module_Helpers.logMsg( ___('ejsConfigFileChangedForViews') );
+
+
+// VIEWS
+// =======================
+
+	// Основная вьюха
+	locals.VIEW_MAIN = VIEWS.index;
+	parseViews(VIEW_MAIN, 'index');
+
+
+	// дописываем ко всем въюхам дополнительные свойства по умолчанию
+	for (let view in VIEWS) {
+		if (view === 'index') {
+			continue;
+		}
+		let data = VIEWS[view];
+		parseViews(data, view);
+	}
+
+	function parseViews(data, view) {
+		if ( notHasProperty('alias', data) ) {
+			data.alias = view;
+		}
+		if ( notHasProperty('href', data) ) {
+			data.href = `${ data.alias }.html`;
+		}
+
+		// breadcrumbs
+
+			if ( notHasProperty('breadcrumbs', data) ) {
+				data.breadcrumbs = {};
+			}
+			if ( notHasProperty('title', data.breadcrumbs) ) {
+				data.breadcrumbs.title = data.title;
+			}
+			if ( notHasProperty('parent', data.breadcrumbs) ) {
+				if (view === VIEW_MAIN.alias) {
+					data.breadcrumbs.parent = null;
+				} else {
+					data.breadcrumbs.parent = VIEW_MAIN.alias;
+				}
+			}
+
+		// sitemap
+
+			if ( notHasProperty('sitemap', data) ) {
+				data.sitemap = {};
+			}
+			if ( notHasProperty('root', data.sitemap) ) {
+				data.sitemap.root = (view === VIEW_MAIN.alias);
+			}
+			if ( notHasProperty('title', data.sitemap) ) {
+				data.sitemap.title = data.breadcrumbs.title;
+			}
+			if ( notHasProperty('parent', data.sitemap) ) {
+				if (view === VIEW_MAIN.alias) {
+					data.sitemap.parent = null;
+				} else {
+					data.sitemap.parent = data.breadcrumbs.parent;
+					//data.sitemap.parent = VIEW_MAIN.alias;
+				}
+			}
+			if ( notHasProperty('ignore', data.sitemap) || view === VIEW_MAIN.alias) {
+				data.sitemap.ignore = false;
+			}
+
+		// criticalCss
+			if ( notHasProperty('criticalCss', data) ) {
+				data.criticalCss = true;
+			}
+
+			if ( typeof(data.criticalCss) == 'string' ) {
+				let _file = data.criticalCss;
+				if (!/^critical-/.test(_file)) {
+					data.criticalCss = `critical-${_file}`
+				}
+			}
+
+			if (data.criticalCss === true) {
+				data.criticalCss = `critical-${view}`;
+			}
+
+	}
+
+
+
+// BREADCRUMBS
+// =======================
+	// объект хлебных
+	locals.BREADCRUMBS = {};
+
+	// Набор данных по хлебным крошкам
+	for (var key in VIEWS) {
+		var value = VIEWS[key];
+		var branch = (BREADCRUMBS[key] = []);
+		getParentCrumbs(value, branch);
+	}
+
+
+// SITEMAP
+// =======================
+	// объект карты сайта
+	locals.SITEMAP = {};
+
+	setMapData(SITEMAP, 'sitemap');
+
+
+
+// helpers
+	/**
+	 * Проверка существования свойства у объекта или его дочерней ветки
+	 *
+	 * @param      {String}  key      Имя свойства
+	 * @param      {Object}  data     Объект проверки
+	 * @param      {Object}  [branch] Дочерняя ветка
+	 * @return     {Boolean}
+	 */
+	function notHasProperty(key, data, branch) {
+		let obj = data;
+		if (branch) {
+			obj = data[branch];
+		}
+		return !obj.hasOwnProperty(key);
+	}
+
+	/**
+	 * Получение родительских крошек
+	 *
+	 * @param      {Object}  obj     Текущая ветка объекта VIEWS
+	 * @param      {Array}   branch  Текущий массив обхекта BREADCRUMBS
+	 * @return     {undefined}
+	 */
+	function getParentCrumbs(obj, branch) {
+		if (obj.breadcrumbs && obj.breadcrumbs.parent) {
+			var parentKey = obj.breadcrumbs.parent;
+			var parentObject = VIEWS[parentKey];
+
+			if (null === parentObject) {
+				let errorMsg = ___('ejsErrorNoBreadcrumbs', [obj.alias, parentKey]);
+				throw errorMsg.join('\n\t');
+			} else {
+				branch.unshift({
+					title: obj.breadcrumbs.title,
+					href: obj.href,
+					isFirst: false,
+					isLast: !branch.length
+				});
+
+				getParentCrumbs(parentObject, branch);
+			}
+
+		} else {
+			branch.unshift({
+				title: obj.breadcrumbs.title,
+				href: obj.href,
+				isFirst: true,
+				isLast: false
+			});
+		}
+	};
+
+	/**
+	 * Набор объекта данных, к примеру карты сайта
+	 *
+	 * @param      {Object}  mapObject  Объект для набора
+	 * @param      {String}  mapBranch  Имя свойств в VIEWS[view] в котором лежат исходные данные
+	 */
+	function setMapData(mapObject, mapBranch) {
+		for (let key in VIEWS) {
+			let sample = VIEWS[key][mapBranch];
+			if (sample.ignore) {
+				continue;
+			}
+			let branch = setMapChildrenProp(key, mapObject, mapBranch);
+			let parentKey = sample.parent;
+			if (null !== parentKey) {
+				let parentBranch = setMapChildrenProp(parentKey, mapObject, mapBranch);
+				parentBranch.children.push(branch);
+			}
+		}
+
+		clearMapData(mapObject, mapBranch);
+	};
+
+	/**
+	 * Добавление массива `children` для каждой ветки из нобора карты
+	 *
+	 * @param      {String}  key
+	 * @param      {Object}  mapObject
+	 * @param      {String}  rootFrom
+	 * @return     {Object}
+	 */
+	function setMapChildrenProp(key, mapObject, rootFrom) {
+		let sample = VIEWS[key][rootFrom];
+		let alias = key;
+		let branch =mapObject[alias] || (mapObject[alias] = {
+			alias: alias,
+			ignore: sample.ignore,
+			root: sample.root
+		});
+		if (!branch.hasOwnProperty('children')) {
+			branch.children = [];
+		}
+		return branch;
+	};
+
+	/**
+	 * Получение дополнительных данных из глобального объект `VIEWS`.
+	 *
+	 * @param      {Object}  mapObject
+	 * @param      {Object}  innerBranch
+	 * @param      {number}  lvl
+	 */
+	function getMapAliasFromViews(mapObject, innerBranch, lvl) {
+		let sample = VIEWS[mapObject.alias];
+		delete mapObject.ignore;
+		mapObject.href = sample.href;
+		mapObject.lvl = lvl;
+		mapObject.title = sample[innerBranch].title;
+		mapObject.children.forEach( (child) => {
+			getMapAliasFromViews(child, innerBranch, lvl + 1 );
+		});
+	};
+
+	function clearMapData(mapObject, mapBranch) {
+		for (let key in mapObject) {
+			if ( mapObject[key].root ) {
+				getMapAliasFromViews(mapObject[key], mapBranch, 0);
+				continue;
+			}
+			delete mapObject[key];
+		}
+	};
+-%>

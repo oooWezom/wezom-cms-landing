@@ -1,0 +1,61 @@
+<%
+	// Пользовательский справочник по всем въюхам.
+	// Наполняеться только здесь !!!
+
+	// Быстрое откл. / вкл. critical стилей
+	let criticalFlag = false;
+	let includeCriticalCss = _IS_TASK_FOR_INKUBATOR || criticalFlag;
+
+	locals.VIEWS = {
+		// основные въюхи
+		index: {
+			title: 'Главная страница',
+			criticalCss: includeCriticalCss
+		},
+
+		// дополнительные въюхи
+		sitemap: {
+			title: 'Карта сайта',
+			criticalCss: includeCriticalCss
+		},
+
+		'404': {
+			title: '404 Страница ошибки',
+			criticalCss: includeCriticalCss
+		},
+
+		// демо въюхи
+		ui: {
+			title: 'UI Раздел',
+			criticalCss: false,
+			demoScriptAnsStyles: true
+		},
+
+		'ui-text': {
+			title: 'UI Типография',
+			criticalCss: false,
+			demoScriptAnsStyles: true,
+			breadcrumbs: {
+				parent: 'ui'
+			}
+		},
+
+		'ui-svg': {
+			title: 'UI SVG Иконки',
+			criticalCss: false,
+			demoScriptAnsStyles: true,
+			breadcrumbs: {
+				parent: 'ui'
+			}
+		},
+
+		'ui-forms': {
+			title: 'UI Формы',
+			criticalCss: false,
+			demoScriptAnsStyles: true,
+			breadcrumbs: {
+				parent: 'ui'
+			}
+		}
+	};
+-%>

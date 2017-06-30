@@ -1,0 +1,100 @@
+////
+/// @group noscript-msg.scss
+////
+
+/// Вертикальные отступы
+/// @type Number
+$noSrciptVerticalSize: 10px;
+
+/// Размер кнопки закрытия
+/// @type Number
+$noSrciptCloseSize: 30px;
+
+/// Фоновый цвет плашки
+/// @type Color
+$noSrciptColorBg: #fcea9c;
+
+/// Цвет текста плашки
+/// @type Color
+$noSrciptColorText: #000;
+
+
+/// Стилизация плашки `noscript`
+/// @require $noSrciptVerticalSize
+/// @require $noSrciptCloseSize
+/// @require $noSrciptColorBg
+/// @require $noSrciptColorText
+#noscript-msg {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	clear: both;
+	font: normal normal 12px/1.2em sans-serif;
+	backface-visibility:hidden;
+	user-select:none;
+	transform: none;
+	transition: none;
+	color: $noSrciptColorText;
+	margin: 0;
+	background-color: $noSrciptColorBg;
+	border: 1px solid transparent;
+	border-left-width: 0;
+	border-right-width: 0;
+	border-top-color: #ababab;
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+		height: 0;
+	}
+	&__block {
+		padding: $noSrciptVerticalSize 0;
+		overflow: hidden;
+		height: auto;
+	}
+	&__close {
+		display: none;
+		&:checked {
+			~ #noscript-msg {
+				display: none;
+			}
+		}
+	}
+	&__times {
+		display: block;
+		position: relative;
+		z-index: 100;
+		float: right;
+		margin: 0;
+		width: $noSrciptCloseSize;
+		height: $noSrciptCloseSize;
+		padding: $noSrciptVerticalSize;
+		box-sizing: content-box;
+		border: none;
+		cursor: pointer;
+		text-align: center;
+		line-height: $noSrciptCloseSize;
+		font-size: $noSrciptCloseSize * 1.2;
+		&:hover {
+			background-color: rgba(#000, .1);
+		}
+	}
+	&__link {
+		display: block;
+		width: 50px;
+		height: 18px;
+		background: transparent url(pic/wezom-noscript-logo.png) left top no-repeat;
+		text-decoration: none !important;
+		float: left;
+		margin: $noSrciptVerticalSize * 1.4 $noSrciptVerticalSize;
+	}
+	&__text {
+		p {
+			font-size: 14px;
+			line-height: 18px;
+			margin: 0;
+		}
+	}
+}

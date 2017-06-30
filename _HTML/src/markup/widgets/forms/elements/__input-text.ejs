@@ -1,0 +1,44 @@
+<%
+	let attrs = {
+		required: ENTRY.required !== false,
+		type: ENTRY.type || 'text',
+		placeholder: ENTRY.placeholder || null,
+		value: ENTRY.value || null
+	};
+
+	var parsed = Object.keys(attrs);
+
+	for (let key in ENTRY) {
+		if (parsed.indexOf(key) >= 0 || /^_/.test(key)) {
+			continue;
+		}
+
+		var value = ENTRY[key];
+		if ( Array.isArray(value) ) {
+			value = value.join(' ');
+		}
+		attrs[key] = value;
+	}
+
+	let idnameType = typeof(ENTRY._idname);
+
+	if (attrs.required && idnameType != 'string') {
+		let errorMsg = ___('ejsErrorFormNoIdName', [filealias]);
+		throw errorMsg.join('\n\t');
+	}
+
+	if (idnameType == 'string') {
+		attrs.id = ENTRY._idname;
+		attrs.name = ENTRY._idname;
+	}
+
+	inputAttrs = Utils.object2attr(attrs, true);
+	console.log(inputAttrs);
+
+-%>
+<div class="control-holder control-holder--text">
+	<input <%- inputAttrs.join(' '); %>>
+	<% if (ENTRY._info !== false && attrs.id && attrs.placeholder) { -%>
+		<span class="form__info">Ваше значение</span>
+	<% } -%>
+</div>

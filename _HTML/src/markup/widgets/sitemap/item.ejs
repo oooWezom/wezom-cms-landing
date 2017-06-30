@@ -1,0 +1,17 @@
+<%
+	let item = ENTRY.item || null;
+	if (null === item) {
+		return '';
+	}
+	let children = item.children || [];
+-%>
+<li>
+	<a href="<%- item.href %>"><%- item.title %></a>
+	<% if (children.length) { -%>
+		<ul>
+			<% children.forEach( (child) => { -%>
+					<%- partial('sitemap/item', {item: child}) -%>
+			<% }); -%>
+		</ul>
+	<% } -%>
+</li>

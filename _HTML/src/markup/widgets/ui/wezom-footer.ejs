@@ -1,0 +1,55 @@
+<% if (VIEW_ACTIVE.demoScriptAnsStyles) { -%>
+	<!-- @TODO Демо скрипты и стили только для ui страниц -->
+	<link rel="stylesheet" href="demo-files/svglist.css">
+	<link rel="stylesheet" href="demo-files/prism.css">
+	<script src="demo-files/prism.js"></script>
+	<script src="demo-files/clipboard.js"></script>
+
+	<script>
+		var clipboard = new Clipboard('.js-clipboard', {
+			action: 'copy'
+		});
+	</script>
+<% } -%>
+
+<% if (_PROJECT_IS_WEZOM) { -%>
+	<!--wold.js settings -->
+	<!-- @TODO @all Изменить путь к изображению на относительный от корня сайта, в переменной `$wzmOld_URL_IMG` -->
+	<script>var $wzmOld_URL_IMG = 'css/pic/wezom-info-red.gif';</script>
+	<script async="async" defer="defer" src="js/wold.js"></script>
+
+	<!-- noscript-msg -->
+	<noscript>
+		<link rel="stylesheet" href="css/noscript-msg.css">
+		<input id="noscript-msg__close" type="checkbox" title="Закрити">
+		<div id="noscript-msg">
+			<label id="noscript-msg__times" for="noscript-msg__close" title="Закрити">&times;</label>
+			<a href="http://wezom.com.ua/" target="_blank" title="Cтудія Wezom" id="noscript-msg__link">&nbsp;</a>
+			<div id="noscript-msg__block">
+				<div id="noscript-msg__text">
+					<p>В Вашем браузере отключен <strong>JavaScript</strong>! Для корректной работы с сайтом необходима поддержка Javascript.</p>
+					<p>Мы рекомендуем Вам включить использование JavaScript в настройках вашего браузера.</p>
+				</div>
+			</div>
+		</div>
+	</noscript>
+<% } -%>
+
+<% if (VIEW_ACTIVE.alias == 'ui-svg') { -%>
+	<script>
+		jQuery(document).ready(function($) {
+			var $holder = $('.svg-preview__holder');
+			if ($holder.length) {
+				$(window).scroll(function(event) {
+					var windowScroll = $(window).scrollTop();
+					var offsetTop = $holder.offset().top;
+					var doClass = 'removeClass';
+					if (windowScroll >= offsetTop) {
+						doClass = 'addClass';
+					}
+					$holder[doClass]('svg-preview__holder--fix');
+				});
+			}
+		});
+	</script>
+<% } -%>

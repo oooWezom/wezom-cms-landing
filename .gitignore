@@ -1,0 +1,51 @@
+# HTML - Основной блок игноров
+# =============================
+# Файл локальной конфигурации для проекта сборки
+_HTML/config.json
+
+# лог и tmp фаилы
+npm-debug.log
+_HTML/tmp/
+design/
+.idea/
+
+# Генерируемые критикал *.ejs файлы
+_HTML/src/markup/widgets/criticals-css/
+_HTML/src/markup/widgets/criticals-css-by-views/
+_HTML/src/markup/widgets/criticals-js/
+
+# Результат задачи по созданию svg-sprite
+_HTML/src/markup/widgets/svg/gradients.ejs
+_HTML/src/markup/widgets/svg/ids.ejs
+
+# Зависимости
+_HTML/node_modules/
+_HTML/bower_components/
+
+# PHP
+## File-based project format:
+*.ipr
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+
+.idea/
+/Config/database.php
+#/Media/images
+/nbproject/
+
+

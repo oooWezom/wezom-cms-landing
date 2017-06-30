@@ -1,0 +1,64 @@
+<%
+	// тег
+	let tag = ENTRY.tag || 'button';
+	let html = ENTRY.html;
+
+	// текст
+	let text = ENTRY.text || 'Lorem';
+
+	// иконка слева
+	let before = ENTRY.before;
+
+	// иконка справа
+	let after = ENTRY.after;
+
+	// классы
+	let classes = ENTRY.classes || [];
+	classes.unshift('button');
+
+	// объект атрибутов
+	let attrsData = ENTRY.attrs || {};
+	attrsData.class = classes;
+	if (tag == 'a' && typeof(attrsData.href) !== 'string') {
+		attrsData.href = '#';
+	}
+
+	// если не ссылка убераем href
+	if ( tag != 'a') {
+		delete attrsData.href;
+	}
+
+	// если не button убераем type и др.
+	if ( tag != 'button') {
+		delete attrsData.type;
+		delete attrsData.disabled;
+	}
+
+	// строка атрибутов
+	let attrs = Utils.object2attr( attrsData );
+
+	// открывающий и закрывающий теги
+	let openTag = `<${tag} ${attrs}>`;
+	let closeTag = `</${tag}>`;
+-%>
+<%- openTag %>
+	<span>
+<% if (before) { -%>
+		<svg>
+			<use xlink:href="svg/sprite.svg#<%- before %>" />
+		</svg>
+<% } -%>
+<% if (classes.indexOf('button--only-icon') < 0) { -%>
+<% if (html) { -%>
+	<%- html %>
+<% } else { -%>
+	<span><%- text %></span>
+<% } -%>
+<% } -%>
+<% if (after) { -%>
+		<svg>
+			<use xlink:href="svg/sprite.svg#<%- after %>" />
+		</svg>
+<% } -%>
+	</span>
+<%- closeTag %>

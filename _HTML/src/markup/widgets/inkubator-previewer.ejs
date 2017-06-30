@@ -1,0 +1,43 @@
+<% if (_IS_TASK_FOR_INKUBATOR) { -%>
+	<nav>
+		<div id="inkubatorPreviewer" class="inkubatorPreviewer" style="display: none;">
+			<div class="inkubatorPreviewer__header">
+				<div id="inkubatorPreviewer__close" class="inkubatorPreviewer__close" title="Закрыть список страниц">&times;</div>
+				<div id="inkubatorPreviewer__title" class="inkubatorPreviewer__title">
+					<%- _PROJECT_NAME -%>
+				</div>
+				<div class="inkubatorPreviewer__pages">
+					страниц - <span id="inkubatorPreviewer__count">13</span>
+				</div>
+			</div>
+			<div class="inkubatorPreviewer__container">
+				<div id="inkubatorPreviewer__list" class="inkubatorPreviewer__list">
+				</div>
+			</div>
+		</div>
+		<div id="inkubatorPreviewer__nav" class="inkubatorPreviewer__nav">
+			<span id="inkubatorPreviewer__open" class="inkubatorPreviewer__link inkubatorPreviewer__open" title="Открыть список страниц">
+				<svg xmlns="http://www.w3.org/2000/svg" width="30" height="42" viewBox="0 0 30 42"><path d="M14 18c0 1.1-.9 2-2 2h-3c-1.1 0-2-.9-2-2v-3c0-1.1.9-2 2-2h3c1.1 0 2 .9 2 2v3zM23 18c0 1.1-.9 2-2 2h-3c-1.1 0-2-.9-2-2v-3c0-1.1.9-2 2-2h3c1.1 0 2 .9 2 2v3zM23 27c0 1.1-.9 2-2 2h-3c-1.1 0-2-.9-2-2v-3c0-1.1.9-2 2-2h3c1.1 0 2 .9 2 2v3zM14 27c0 1.1-.9 2-2 2h-3c-1.1 0-2-.9-2-2v-3c0-1.1.9-2 2-2h3c1.1 0 2 .9 2 2v3z"></path></svg>
+			</span>
+			<a href="#" id="inkubatorPreviewer__home" class="inkubatorPreviewer__link inkubatorPreviewer__home" title="Перейти на главную страницу">
+				<svg xmlns="http://www.w3.org/2000/svg" width="30" height="42" viewBox="0 0 30 42"><path d="M23.6 19.9c.5.5.5 1.2.1 1.7-.2.2-.5.3-.8.3-.3 0-.5-.1-.8-.3l-7.1-6.8-7.1 6.9c-.5.5-1.2.4-1.6-.1-.4-.5-.4-1.2.1-1.6l7.1-6.9c.8-.8 2.2-.8 3 0l7.1 6.8zm-8.6-3.2l5.6 5.2v6.4c0 .6-.5 1.2-1.1 1.2h-2.8v-4.6h-3.4v4.6h-2.8c-.6 0-1.1-.5-1.1-1.2v-6.4l5.6-5.2z"></path></svg>
+			</a>
+			<span id="inkubatorPreviewer__prev" class="inkubatorPreviewer__link inkubatorPreviewer__prev" title="Предыдущая страница">
+				<svg xmlns="http://www.w3.org/2000/svg" width="30" height="42" viewBox="6 0 30 42"><path d="M25.1 28.5c-.2.3-.6.5-1 .5s-.7-.1-.9-.4l-5.7-5.7c-1.1-1.1-1.1-2.7 0-3.8l5.7-5.7c.5-.5 1.2-.6 1.7-.2.7.5.7 1.5.2 2l-5.8 5.8 5.7 5.7c.5.5.5 1.3.1 1.8z"></path></svg>
+			</span>
+			<span id="inkubatorPreviewer__next" class="inkubatorPreviewer__link inkubatorPreviewer__next" title="Следующая страница">
+				<svg xmlns="http://www.w3.org/2000/svg" width="30" height="42" viewBox="0 0 30 42"><path d="M10.9 28.5c-.5-.5-.4-1.3.1-1.9l5.7-5.7-5.7-5.7c-.5-.5-.5-1.5.2-2 .5-.4 1.2-.3 1.7.2l5.7 5.7c1.1 1.1 1.1 2.7 0 3.8l-5.7 5.7c-.3.3-.6.4-.9.4-.5 0-.8-.2-1.1-.5z"></path></svg>
+			</span>
+			<span id="inkubatorPreviewer__closeMenu" class="inkubatorPreviewer__link inkubatorPreviewer__closeMenu" title="Закрыть меню">&times;</span>
+		</div>
+		<div id="inkubatorPreviewer__overlay" class="inkubatorPreviewer__overlay"></div>
+	</nav>
+
+	<% // ОСТАВИТЬ КАК ЕСТЬ, не форматировать -%>
+	<link rel="stylesheet" href="demo-files/inkubator-previewer.css">
+	<script>var inkubatorPreviewerActive='<%-VIEW_ACTIVE.alias%>';</script>
+	<script>var inkubatorPreviewerTitle='<%-VIEW_ACTIVE.title%>';</script>
+	<script defer src="demo-files/inkubator-previewer-data.js"></script>
+	<script defer src="demo-files/inkubator-previewer.js"></script>
+	<!-- #end inkubatorPreviewer -->
+<% } -%>

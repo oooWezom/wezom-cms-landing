@@ -1,0 +1,58 @@
+{
+	"browserSyncDisabled": "BrowserSync отключен!",
+	"criticalCssDisabled": "Динамическое разделение критикал стилей - отключено!",
+	"criticalExcludedFiles": [
+		"Исключаем файлы, при создании критических стилей:",
+		"%s",
+		""
+	],
+	"criticalWillWriteFile": [
+		"После генерации, файл будет сохранен",
+		"%s"
+	],
+	"criticalExcludedFile": [
+		"Файл %s - исключен при создании критических стилей !!!"
+	],
+	"criticalNoFiles": "Файлы для создания критических стилей - не найдены !!!",
+	"criticalNoFile": [
+		"Файл %s - не найден !!!"
+	],
+	"distFolderIs": "Итоговая директория - \"%s\"",
+	"mediaFolderIs": [
+		"!!!",
+		"Медиа директория - \"%s\"",
+		""
+	],
+
+	"ejsConfigFileChangedForUtils": "_config.ejs был изменён, делаю ре-инит хелперов",
+	"ejsConfigFileChangedForViews": "_config.ejs был изменён, пересобераю данные по вьюхам",
+	"ejsErrorNoView": [
+		"!!!",
+		"нужно указать ветку параметров \"%s\"",
+		"в глобальном объекте VIEWS",
+		"смотри - src/markup/_config.ejs"
+	],
+	"ejsErrorNoBreadcrumbs": [
+		"!!!",
+		"Не корректное значение для хлебных крошек",
+		"VIEWS[\"%s\"].breadcrumbs.parent - содержит ссылку на",
+		"несуществующую ветку объекта VIEWS - \"%s\"",
+		"смотри - src/markup/_config.ejs"
+	],
+	"ejsErrorFormNoIdName": [
+		"!!!",
+		"Не указано свойство _idname",
+		"для обязательного элемента формы",
+		"Значение должно быть строкой"
+	],
+
+	"htmlToDoNoContent": "HTML комментариев <!-- @todo [task] --> не обнаружено",
+
+	"isNotString": "Образец не являеться строкой!",
+	"pathNotExistGoNext": "Указанный путь \"%s\" - не существует, пропускаем задачу очистки",
+	"selfHasNoProperty": "Справочник l10n не имеет свойства с ключем \"%s\"!",
+	"setCorrectDataType": "Укажите корректный тип данных!",
+	"tmpFolderCreated": "Создана временная директория - \"%s\"",
+	"useLogErrorMethod": "Для генерации ошибок используйте метод - helpers.logError(message, stopProcess)",
+	"whenCallingMethod": "При вызове метода %s"
+}

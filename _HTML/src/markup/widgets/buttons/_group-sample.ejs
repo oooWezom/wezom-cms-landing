@@ -1,0 +1,11 @@
+<%
+	// базовый конфиг
+	let baseConfig = ENTRY.base || {};
+
+	// список кинфигов для каждой кнопки
+	let buttonsList = ENTRY.list || [];
+-%>
+<% buttonsList.forEach( (buttonConfig, i) => { -%>
+	<% let config = _Module_DeepExtend( {}, baseConfig, buttonConfig ); -%>
+	<%- partial('buttons/_sample', config) -%>
+<% }); -%>

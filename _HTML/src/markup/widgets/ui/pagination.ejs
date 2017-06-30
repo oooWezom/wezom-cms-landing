@@ -1,0 +1,48 @@
+<div class="pagination">
+	<div class="buttons-group buttons-group--center">
+		<%
+			let group = {
+				base: {
+					tag: 'a',
+					text: 12,
+					attrs: {
+						href: VIEW_ACTIVE.href
+					}
+				},
+				list: [{
+					before: 'arrow-left',
+					classes: [
+						"button--only-icon"
+					]
+				}, {
+					text: 2
+				}, {
+					tag: 'span',
+					text: 3,
+					classes: [
+						"is-active"
+					]
+				}, {
+					text: 4
+				}, {
+					tag: 'span',
+					text: '...',
+					classes: [
+						"button--disabled"
+					]
+				}, {
+					text: 12
+				}, {
+					text: 13
+				}, {
+					before: 'arrow-right',
+					classes: [
+						"button--only-icon"
+					]
+				}]
+			}
+		-%>
+		<%- partial('buttons/_group-sample', group) -%>
+	</div>
+</div>
+<!-- pagination -->

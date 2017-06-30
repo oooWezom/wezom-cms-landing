@@ -1,0 +1,56 @@
+<%
+	let cssFiles = [
+		'global-critical'
+	];
+
+	let jsFiles = [
+		'localstorage-test',
+		//'localstorage-fonts',
+	];
+-%>
+
+<%
+cssFiles.forEach( (file) => {
+	let code = partial(`criticals-css/${file}`);
+	if (code.length) {
+-%>
+		<!-- <%- `${file}.css` %> -->
+		<style><%- code -%></style>
+<%
+	}
+});
+-%>
+
+<%
+let viewCss = VIEW_ACTIVE.criticalCss;
+if (viewCss) {
+	try {
+-%>
+		<!-- <%- `${viewCss}.css` %> -->
+		<!-- @TODO Отдельные критические стили для вьюхи "**<%- `${VIEW_ACTIVE.alias}` %>**" -->
+		<style><%- partial(`criticals-css-by-views/${viewCss}`) -%></style>
+<%
+	} catch(err) {
+		_Module_Helpers.logMsg(
+			`criticalCss -> ${err}`,
+			'warn'
+		);
+	}
+}
+-%>
+
+<%
+jsFiles.forEach((file) => {
+let code = partial(`criticals-js/${file}`);
+	if (code.length) {
+-%>
+		<% if (file == 'localstorage-fonts') { -%>
+			<!-- @TODO @all - Указать путь от корня сайта до папки `css`, к примеру `/Media/` -->
+			<script>var MEDIA_FONT_PATH = '';</script>
+		<% } -%>
+		<!-- <%- `${file}.js` %> -->
+		<script><%- code -%></script>
+<%
+	}
+});
+-%>

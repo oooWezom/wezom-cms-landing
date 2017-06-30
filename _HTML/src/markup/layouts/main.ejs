@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru-RU" dir="ltr" class="no-js">
+	<head>
+		<%- partial('head') -%>
+	</head>
+	<body>
+		<div class="view-wrapper">
+
+			<% if (BREADCRUMBS[filealias].length > 1) { -%>
+			<section class="view-section">
+				<div class="widget">
+					<div class="view-size">
+						<%- partial('ui/breadcrumbs') -%>
+					</div>
+				</div>
+				<!-- #end widget -->
+			</section>
+			<% } -%>
+
+			<!-- view-body -->
+			<%- body -%>
+			<!-- #end view-body -->
+
+			<%- partial('view-footer') -%>
+			<!-- #end view-footer -->
+		</div>
+
+		<link rel="stylesheet" href="css/vendor/jquery-plugins.css">
+		<link rel="stylesheet" href="css/fonts.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/responsive.css">
+		<script src="js/vendor/modernizr.js"></script>
+		<script src="js/vendor/jquery.js"></script>
+		<script src="js/vendor/jquery-plugins.js"></script>
+		<script src="js/init.js"></script>
+
+		<!-- @TODO @all Демо скрипт с переводами, в основном для jquery-validate. заменить на программный файл, который должен содержать глобальный объект `validationTranslate` -->
+		<script src="js/programmer/translate-ru.js"></script>
+
+		<%- partial('ui/wezom-footer') -%>
+		<%- partial('svg/gradients') -%>
+		<%- partial('inkubator-previewer') -%>
+
+	</body>
+</html>
+<% delete locals.blocks %>
